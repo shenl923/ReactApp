@@ -2,16 +2,16 @@
 
 .root {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%;
 }
 
-.root-leftPanel {
+.root-content {
   padding-top: 10px;
   display: flex;
-  flex-direction: column;
-  width: 65px;
-  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
   background-color: #7f7f7f;
   //height: calc(100% - 1px);
   //height: 500px;
@@ -25,9 +25,10 @@
   }
 }
 
-.root-rightPanel {
-  //display: flex;
+.root-bottom {
+  display: flex;
   //justify-content: center;
   width: 100%;
   height: auto;
+  justify-content: space-around;
 }

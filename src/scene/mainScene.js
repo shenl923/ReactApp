@@ -24,12 +24,12 @@ class App extends Component {
   render() {
     return (
       <div className="root">
-        <div className="root-leftPanel">
+        <div className="root-content">
+          {this.props.children}
+        </div>
+        <div className="root-bottom">
           <IconLink imageSrc={Icon.IC_HOME} to="/user" tips="home page" />
           <IconLink imageSrc={Icon.IC_RECORD} to="/consumeRecord" tips="records"/>
-        </div>
-        <div className="root-rightPanel">
-          {this.props.children}
         </div>
       </div>
     )
