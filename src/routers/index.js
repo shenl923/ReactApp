@@ -1,17 +1,16 @@
 import Users from '../scene/users'
 import userRouter from "../scene/users/router"
-
+import authenticateRouter from "../scene/authenticate/router"
 import App from "../scene/mainScene"
-import consumeRecord from "../scene/consumeRecord"
+//import Authenticate from "../scene/authenticate"
 
 export const routes = {
   path: '/',
   //onEnter,
   component: App,
-  indexRoute: { component: Users },
-  //indexRoute:{onEnter: (nextState, replace) => replace('/Example1')},
+  indexRoute:{onEnter: (nextState, replace) => replace('/authenticate')},
   childRoutes: [
-    { path: 'consumeRecord', component: consumeRecord },
+    authenticateRouter,
     userRouter,
     // { path: 'Users', component: Users },
     //require('../scene/users/router'),

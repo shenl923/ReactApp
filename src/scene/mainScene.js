@@ -27,10 +27,13 @@ class App extends Component {
         <div className="root-content">
           {this.props.children}
         </div>
-        <div className="root-bottom">
-          <IconLink imageSrc={Icon.IC_HOME} to="/user" tips="home page" />
-          <IconLink imageSrc={Icon.IC_RECORD} to="/consumeRecord" tips="records"/>
-        </div>
+          {/*
+              <div className="root-bottom">
+                  <IconLink imageSrc={Icon.IC_RECORD} to="/authenticate" tips="authenticate"/>
+                  <IconLink imageSrc={Icon.IC_HOME} to="/user" tips="home page"/>
+              </div>
+              */
+          }
       </div>
     )
   }
