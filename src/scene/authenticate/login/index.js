@@ -31,10 +31,8 @@ class Login extends Component {
         console.log(this.state[`${name}First`]);
         if (!this.state[`${name}First`]) {
             state[`${name}Error`] = validate(name, value);
-            console.log(state);
         } else {
             state[`${name}Error`] = null;
-            console.log("222")
         }
         this.setState(state);
     };
@@ -48,40 +46,45 @@ class Login extends Component {
     };
 
     handleLogin = () => {
-        console.log("HANDLE_LOGIN")
+        const {router} = this.props;
+        console.log(router);
+        //router.push("user");
+        router.replace("user");
     }
     render() {
         return (
             <div className="authenticate-login">
-                <FormInput
-                    key="1"
-                    type="tel"
-                    name="mobile"
-                    maxLength="11"
-                    placeholder="请输入账号"
-                    value={this.state.account}
-                    error={this.state.accountError}
-                    onChange={value => this.handleChange('account', value)}
-                    onBlur={() => this.handleBlur('account')}
-                />
-                <FormInput
-                    key="2"
-                    type="password"
-                    name="password"
-                    maxLength="12"
-                    placeholder="密码，至少六位"
-                    error={this.state.passwordError}
-                    onChange={value => this.handleChange('password', value)}
-                    onBlur={() => this.handleBlur('password')}
-                    onKeyUp={this.onKeyUp}
-                />
-                <Button
-                    key="3"
-                    inverse
-                    title="登录"
-                    className="authenticate-login-button"
-                    onClick={this.handleLogin}
-                />
+                <div className="authenticate-login-content">
+                    <FormInput
+                      key="1"
+                      type="tel"
+                      name="mobile"
+                      maxLength="11"
+                      placeholder="请输入账号"
+                      value={this.state.account}
+                      error={this.state.accountError}
+                      onChange={value => this.handleChange('account', value)}
+                      onBlur={() => this.handleBlur('account')}
+                    />
+                    <FormInput
+                      key="2"
+                      type="password"
+                      name="password"
+                      maxLength="12"
+                      placeholder="密码，至少六位"
+                      error={this.state.passwordError}
+                      onChange={value => this.handleChange('password', value)}
+                      onBlur={() => this.handleBlur('password')}
+                      onKeyUp={this.onKeyUp}
+                    />
+                    <Button
+                      key="3"
+                      inverse
+                      title="登录"
+                      className="authenticate-login-button"
+                      onClick={this.handleLogin}
+                    />
+                </div>
             </div>
         );
     }

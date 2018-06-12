@@ -24,9 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="root">
-        <div className="root-content">
           {this.props.children}
-        </div>
           {/*
               <div className="root-bottom">
                   <IconLink imageSrc={Icon.IC_RECORD} to="/authenticate" tips="authenticate"/>
