@@ -73,7 +73,6 @@ export class Example extends Component {
         <p id="fileName">fileName</p>
         <p id="fileSize">fileSize</p>
         <p id="fileType">fileType</p>
-
       </div>
     );
   }
@@ -85,12 +84,23 @@ export default class UserList extends React.Component {
     return (
       <div className="user">
         <div className="user-leftPanel">
-          <Link to="/user/Balance">标签页1</Link>
-          <Link to="/user/Example2">标签页2</Link>
-          <Link to="/user/trainRecords">标签页3</Link>
-          <Link to= {"/user/Example/" + data.id}>标签页4</Link>
+          <div className="user-info">
+            useInfo
+          </div>
+            <div className="award-record">
+                award-record
+            </div>
+          <div className="award-results">
+              award-results
+          </div>
         </div>
         <div className="user-rightPanel">
+          <div className="user-navigation">
+              <Link to="/user/Balance">标签页1</Link>
+              <Link to="/user/Example2">标签页2</Link>
+              <Link to="/user/trainRecords">标签页3</Link>
+              <Link to= {"/user/Example/" + data.id}>标签页4</Link>
+          </div>
           {this.props.children}
         </div>
       </div>

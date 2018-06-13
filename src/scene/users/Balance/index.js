@@ -40,16 +40,7 @@ export default class Balance extends Component {
     let floatView = `floatView-${tab}`;
     return (
       <div className="balanceRoot">
-        <div className="balanceHeader">
-          <p onClick={this.onClickTabByKey.bind(this, 1)}>单个类</p>
-          <p onClick={this.onClickTabByKey.bind(this, 2)}>称重类</p>
-          <p onClick={this.onClickTabByKey.bind(this, 3)}>大箱类</p>
-          <div className={floatView}/>
-        </div>
-        <div className="balanceContent">
-          {this.renderSelect()}
-          {this.renderTextInput("产品总价(元) ")}
-        </div>
+
       </div>
     );
   }
